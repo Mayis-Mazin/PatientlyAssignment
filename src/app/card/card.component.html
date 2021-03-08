@@ -1,1 +1,37 @@
-<p>card works!</p>
+
+<section id="team" class="pb-5">
+    
+    <div class="container">
+        <h5 class="section-title h1">Upcoming Appointments </h5>
+        <div class="row">
+          
+            <div class="col-xs-10 col-sm-5 col-md-3" *ngFor='let user of users'>
+
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover'); "routerLink="user/{{user.id}}" >
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img  routerLink="user/{{user.id}}" class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png" alt="card image"></p>
+                                    <h4 class="card-title">{{user.name}}</h4>
+                                    <p class="card-text"> 
+                                        email: {{user.email}} 
+                                        | phone number: {{user.phone}} 
+                                        | Heart beat: {{heartBeat}} bpm 
+                                        </p>
+                                    <!-- <a href="#" class="btn btn-primary btn-sm"> button1<i class="fa fa-plus"></i></a>
+                                    <a href="#" class="btn btn-primary btn-sm"> button2<i class="fa fa-plus"></i></a>
+                                    <a href="#" class="btn btn-primary btn-sm"> button3<i class="fa fa-plus"></i></a> -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+          
+
+        </div>
+    </div>
+</section>
