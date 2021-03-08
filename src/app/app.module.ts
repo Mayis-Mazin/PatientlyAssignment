@@ -1,3 +1,4 @@
+import { UserService } from './user.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatListModule } from '@angular/material/list';
@@ -18,6 +19,7 @@ import { CardComponent } from './card/card.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { HttpClient } from '@angular/common/http';
+import { UsersService } from 'src/services/users.service';
 
 
 @NgModule({
@@ -43,7 +45,7 @@ import { HttpClient } from '@angular/common/http';
     MatCardModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
