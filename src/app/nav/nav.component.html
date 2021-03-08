@@ -6,7 +6,11 @@
       <button mat-raised-button class='brand-btn'> Patiently</button>
       <mat-toolbar></mat-toolbar>
        <mat-nav-list>
-      <a mat-list-item routerLink="/home">Upcoming Patients</a>
+      <a mat-list-item routerLink="/home">
+        <p>
+          <span matBadge="4" matBadgeOverlap="false">Upcoming Patients</span>
+        </p>
+        </a>
       <a mat-list-item href="lab">Lab Result</a>
       <a mat-list-item href="follow"> Follow ups</a>
       <a mat-list-item href="message">Messages</a>
@@ -17,7 +21,13 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar color="#FFFFFF">
+      <div>
+        <ul class="nav navbar-nav navbar-right">
+              
+          <img alt="Brand" class='aimg' src="https://image.flaticon.com/icons/png/512/149/149071.png">
+        </ul>
+      </div>
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -26,9 +36,14 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Patiently</span>
+    
+      <!-- <p><img  routerLink="user/{{user.id}}" class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png" alt="card image"></p>
+      <h4 class="card-title">{{user.name}}</h4>
+     -->
+      <span>   User Name</span>
     </mat-toolbar>
     <!-- Add Content Here -->
+    
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
