@@ -9,7 +9,7 @@
   right: 15px;
   bottom: 15px;
 }
-.card-img{
+.card-img {
   width: 150px;
   height: 150px;
   align-items: center;
@@ -20,7 +20,7 @@
   top: 5px;
   right: 10px;
 }
-.svg-icon{
+.svg-icon {
   width: 26px;
   height: 25px;
   align-items: center;
@@ -30,13 +30,13 @@
   text-align: center;
   margin-left: 150px;
 }
-.card-content{
+.card-content {
   margin-left: 190px;
 }
-.t-color{
-  color:#C3C8CB
-  
+.t-color {
+  color: #c3c8cb;
 }
-.card-cc{
+.card-cc {
   margin-right: 35px;
 }
+

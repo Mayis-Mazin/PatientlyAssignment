@@ -1,23 +1,46 @@
-<mat-card>
-    <mat-card-title>
-        <img mat-card-md-image  src='https://image.flaticon.com/icons/png/512/149/149071.png'>
-
-        <!-- <img class='card-img' mat-card-image>  -->
-    </mat-card-title>
-    <mat-card-subtitle>
-        {{userDetail?.name}}
-        <mat-card-content>
-            email: {{userDetail?.email}} 
-            <br>
-            phone number: {{userDetail?.phone}} 
-            <!-- | Heart beat: heartBeat bpm  -->
-            <mat-card-actions >
-                <a href="home">
-                <button mat-raised-button>Home</button>
-                </a>
-                
+<div class="grid-container justfiy-content-center text-center">
+    <h1 class="mat-h1" class='t-color'>User Profile</h1>
+    <mat-grid-list cols="1" rowHeight="350px">
+      <mat-grid-tile>
+        <mat-card class="dashboard-card">
+          <div class="content-container justfiy-content-center text-center">
+            <div class="row justfiy-content-center text-center">
+              <div class="offset-md-4 col-md-4">
+          <mat-card-header class="w-100 mx-auto">
+            <mat-card-title class="w-100"> 
+              <!-- /photo -->
+              <img class="card-content card-img mx-auto mt-3"  mat-card-image src="https://image.flaticon.com/icons/png/512/149/149071.png" >
+              <!-- {{user.imgUrl}} -->
+            </mat-card-title>
+            <mat-card-subtitle class="dashboard-card-content">
+              <!-- {{card.name}} -->
+            </mat-card-subtitle>
+           </mat-card-header>
+           </div>
+           </div>
+           </div>
+          <mat-card-content class="dashboard-card-content">
+          </mat-card-content>
+          <mat-card-footer>
+            <mat-card-actions>
+              
+              <div class="content-container justfiy-content-center text-center">
+                <div class="row justfiy-content-center text-center">
+                  <div class="offset-md-4 col-md-4">
+                    <img class="card-content card-cc svg-icon ml-0"  src="../../assets/weight.svg"> 
+                    <!-- {{user.weight}} -->
+                    <img class="card-cc svg-icon" src="../../assets/length.svg">
+                    <!-- {{user.length}} -->
+                    <img class="card-cc svg-icon" src="../../assets/hartbeat.svg">
+                    <!-- {{user.hartbeat}} -->
+                  </div>
+              </div>
+            </div>
             </mat-card-actions>
-         
-        </mat-card-content>
-    </mat-card-subtitle>
-</mat-card>
+            <div>
+          </div>
+            </mat-card-footer>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>

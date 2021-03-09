@@ -1,11 +1,50 @@
-.img-fluid{
-width: 60px;
-height: 60px;
-}
-.card-img{
-width: 100px;
-height: 100px;
-padding-left: 80px;
-padding-top: 30px;
-
-}
+.grid-container {
+    margin: 20px;
+  }
+  
+  .dashboard-card {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+  .card-img{
+    width: 150px;
+    height: 150px;
+    left: 45px;
+    right: 45px;
+    margin-top: 50px;
+  }
+  .more-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+  .svg-icon{
+    width: 26px;
+    height: 25px;
+    align-items: center;
+  }
+  
+  .dashboard-card-content {
+    text-align: center;
+    margin-left: 200px;
+  }
+  .card-content{
+    margin-left: 430px;
+  }
+  .content-container{
+    margin-left: 30px;
+  }
+  .t-color{
+    color:#C3C8CB
+    
+  }
+  .card-cc{
+    margin-right: 35px;
+  }
+  .usrProfile{
+    margin-left: 135px;
+      
+  }
