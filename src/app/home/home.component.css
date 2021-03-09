@@ -9,17 +9,34 @@
   right: 15px;
   bottom: 15px;
 }
-
+.card-img{
+  width: 150px;
+  height: 150px;
+  align-items: center;
+  margin-top: 50px;
+}
 .more-button {
   position: absolute;
   top: 5px;
   right: 10px;
 }
+.svg-icon{
+  width: 26px;
+  height: 25px;
+  align-items: center;
+}
 
 .dashboard-card-content {
   text-align: center;
+  margin-left: 150px;
+}
+.card-content{
+  margin-left: 190px;
 }
 .t-color{
   color:#C3C8CB
   
+}
+.card-cc{
+  margin-right: 35px;
 }
