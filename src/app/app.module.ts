@@ -20,6 +20,9 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { HttpClient } from '@angular/common/http';
 import { UsersService } from 'src/services/users.service';
+import { LabResultComponent } from './lab-result/lab-result.component';
+import { FollowUpsComponent } from './follow-ups/follow-ups.component';
+import { MessagesComponent } from './messages/messages.component';
 
 
 @NgModule({
@@ -29,6 +32,9 @@ import { UsersService } from 'src/services/users.service';
     HomeComponent,
     CardComponent,
     UserDetailsComponent,
+    LabResultComponent,
+    FollowUpsComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,
