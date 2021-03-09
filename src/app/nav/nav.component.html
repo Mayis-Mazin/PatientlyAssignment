@@ -18,22 +18,29 @@
       <a mat-list-item routerLink="/home">Upcoming Patients 
         <h5><span class="badge badge-danger">+9</span></h5>
         </a>
-      <a mat-list-item href="lab">Lab Result
-      <h5><span class="badge badge-danger">3</span></h5></a>
+      <a mat-list-item routerLink="/lab">Lab Result
+        <h5>
+          <span class="badge badge-danger">3</span>
+        </h5>
+      </a>
 
-      <a mat-list-item href="follow"> Follow ups
-      <h5><span class="badge badge-danger">2</span></h5></a>
+      <a mat-list-item routerLink="/follow"> Follow ups
+        <h5>
+          <span class="badge badge-danger">2</span>
+        </h5>
+      </a>
 
-      <a mat-list-item href="message">Messages
-      <h5><span class="badge badge-danger">1</span></h5></a>
+      <a mat-list-item routerLink="/message">Messages
+        <h5>
+          <span class="badge badge-danger">1</span>
+        </h5>
+      </a>
 
     </mat-nav-list>
   </mat-sidenav>
+
   <mat-sidenav-content>
     <mat-toolbar color="#FFFFFF">
-      <div>
-
-      </div>
       <div>
         <ul class="nav navbar-nav navbar-right">
               
@@ -48,10 +55,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-    
-      <!-- <p><img  routerLink="user/{{user.id}}" class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png" alt="card image"></p>
-      <h4 class="card-title">{{user.name}}</h4>
-     -->
+  
      <span> </span>
 
      <div class="container h-100">
@@ -64,8 +68,10 @@
     </div>
 
     </mat-toolbar>
+
     <!-- Add Content Here -->
     
     <router-outlet></router-outlet>
+    
   </mat-sidenav-content>
 </mat-sidenav-container>

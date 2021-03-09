@@ -1,4 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+/* mat style */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-card-header .mat-card-title{
+    margin-bottom: 12px;
+    display: block;
+}
+
+.mat-card-header-text{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.mat-card-image:first-child{margin: auto !important;}
+
+.mat-card-header .mat-card-subtitle:not(:first-child){
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 0;
+}
+
+.mat-card-actions{text-align: center;}

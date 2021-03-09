@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit {
     this.service.getUsers().subscribe(
       res => {
         this.cards = res;     
-        console.log(this.cards)
       }
     )
   }

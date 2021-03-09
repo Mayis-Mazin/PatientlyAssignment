@@ -12,4 +12,8 @@ export class UsersService {
   getUsers() {
     return this.http.get(environment.api);
   }
+
+  getUser(id: any) {
+    return this.http.get(`${environment.api}/${id}`);
+  }
 }

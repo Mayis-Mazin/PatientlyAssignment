@@ -1,4 +1,3 @@
-import { UserService } from './user.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatListModule } from '@angular/material/list';
@@ -18,11 +17,13 @@ import { MatMenuModule } from '@angular/material/menu';
 import { CardComponent } from './card/card.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { HttpClient } from '@angular/common/http';
 import { UsersService } from 'src/services/users.service';
 import { LabResultComponent } from './lab-result/lab-result.component';
 import { FollowUpsComponent } from './follow-ups/follow-ups.component';
 import { MessagesComponent } from './messages/messages.component';
+import { RouterModule } from '@angular/router';
+import { UserComponent } from './user/user.component';
+import {MatRippleModule} from '@angular/material/core';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { MessagesComponent } from './messages/messages.component';
     LabResultComponent,
     FollowUpsComponent,
     MessagesComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,30 @@ import { MessagesComponent } from './messages/messages.component';
     BrowserAnimationsModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatRippleModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        component: HomeComponent
+      },
+      {
+        path: 'lab',
+        component: LabResultComponent        
+      },
+      {
+        path: 'follow',
+        component: FollowUpsComponent        
+      } ,
+      {
+        path: 'message',
+        component: MessagesComponent        
+      },
+      {
+        path: 'user/:id',
+        component: UserDetailsComponent        
+      }                                                         
+    ])    
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]
