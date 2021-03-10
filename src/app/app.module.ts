@@ -24,6 +24,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { RouterModule } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import {MatRippleModule} from '@angular/material/core';
+import { TableComponent } from './table/table.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import {MatRippleModule} from '@angular/material/core';
     FollowUpsComponent,
     MessagesComponent,
     UserComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,

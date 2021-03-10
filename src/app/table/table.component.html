@@ -1,0 +1,22 @@
+<div class="container">
+
+    <table class="table table-bordered table-striped">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Department</th>
+        <th>Email</th>
+        <th>Country</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let friend of table">
+        <td><span>{{friend.name}}</span></td>
+        <td><span>{{friend.username}}</span></td>
+        <td><span>{{friend.email}}</span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
