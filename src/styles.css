@@ -1,3 +1,7 @@
+/* global */
+
+a{text-decoration: none !important;}
+
 /* mat style */
 
 .mat-card-header .mat-card-title{
@@ -20,4 +24,52 @@
     margin: 0;
 }
 
+.mat-card-image:first-child{
+    height: 230px;
+    width: 230px;
+}
+
 .mat-card-actions{text-align: center;}
+
+/* custom style */
+
+.grid-container {
+    margin: 20px;
+  }
+  
+  .dashboard-card {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+  .card-img{
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .more-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+  .svg-icon{
+    width: 26px;
+    height: 25px;
+    align-items: center;
+  }
+  
+  .dashboard-card-content {
+    text-align: center;
+    margin-left: 150px;
+  }
+  
+  .t-color{
+    color:#C3C8CB
+    
+  }
+  .card-cc{
+    margin-right: 10px;
+  }

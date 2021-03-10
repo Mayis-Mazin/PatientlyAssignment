@@ -15,9 +15,9 @@ export class HomeComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver, private service: UsersService ) {}
 
 
-    ngOnInit() {
-      this.getAllUsers();
-    }
+  ngOnInit() {
+    this.getAllUsers();
+  }
 
   getAllUsers() {
     this.service.getUsers().subscribe(

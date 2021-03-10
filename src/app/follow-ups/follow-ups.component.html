@@ -1,1 +1,37 @@
-<p>follow-ups works!</p>
+<div class="grid-container">
+<h1 class="mat-h1" class='t-color'>Follow Ups</h1>
+<mat-grid-list cols="3" rowHeight="350px">
+    <mat-grid-tile *ngFor="let card of cards">
+    <a routerLink="/user/{{card.id}}">
+        <mat-card class="dashboard-card">
+        <mat-card-header>
+            <mat-card-title>
+            <!-- /photo -->
+            <img class="dashboard-card-content card-img"  mat-card-image src="https://image.flaticon.com/icons/png/512/149/149071.png" >
+            <!-- {{user.imgUrl}} -->
+            </mat-card-title>
+            <mat-card-subtitle class="dashboard-card-content">
+            {{card.name}}
+            </mat-card-subtitle>
+            </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+        </mat-card-content>
+        <mat-card-footer>
+            <mat-card-actions>
+            
+            <img class="card-content card-cc svg-icon" src="../../assets/weight.svg"> 
+            <!-- {{user.weight}} -->
+            <img class="card-cc svg-icon" src="../../assets/length.svg">
+            <!-- {{user.length}} -->
+            <img class="card-cc svg-icon" src="../../assets/hartbeat.svg">
+            <!-- {{user.hartbeat}} -->
+        
+            </mat-card-actions>
+            <div>
+        </div>
+            </mat-card-footer>
+        </mat-card>
+    </a>
+    </mat-grid-tile>
+</mat-grid-list>
+</div>

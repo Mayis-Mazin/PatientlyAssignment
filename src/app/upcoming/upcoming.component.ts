@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { UsersService } from './../../services/users.service';
 
 @Component({
-  selector: 'app-lab-result',
-  templateUrl: './lab-result.component.html',
-  styleUrls: ['./lab-result.component.css']
+  selector: 'app-upcoming',
+  templateUrl: './upcoming.component.html',
+  styleUrls: ['./upcoming.component.css']
 })
-export class LabResultComponent implements OnInit {
+export class UpcomingComponent implements OnInit {
   cards: any;
-
+  
   constructor(private service: UsersService) { }
 
   ngOnInit() {
@@ -22,5 +22,4 @@ export class LabResultComponent implements OnInit {
       }
     )
   }
-
 }

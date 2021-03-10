@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from './../../services/users.service';
 
 @Component({
   selector: 'app-follow-ups',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./follow-ups.component.css']
 })
 export class FollowUpsComponent implements OnInit {
+  cards: any;
+  
+  constructor(private service: UsersService) { }
 
-  constructor() { }
+  ngOnInit() {
+    this.getAllUsers();
+  }
 
-  ngOnInit(): void {
+  getAllUsers() {
+    this.service.getUsers().subscribe(
+      res => {
+        this.cards = res;     
+      }
+    )
   }
 
 }

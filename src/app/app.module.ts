@@ -24,7 +24,18 @@ import { MessagesComponent } from './messages/messages.component';
 import { RouterModule } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import {MatRippleModule} from '@angular/material/core';
-import { TableComponent } from './table/table.component';
+import { UpcomingComponent } from './upcoming/upcoming.component';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { FormsModule } from '@angular/forms';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzAutocompleteModule } from 'ng-zorro-antd/auto-complete';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+
+
+registerLocaleData(en);
 
 
 @NgModule({
@@ -38,7 +49,7 @@ import { TableComponent } from './table/table.component';
     FollowUpsComponent,
     MessagesComponent,
     UserComponent,
-    TableComponent,
+    UpcomingComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,11 +66,18 @@ import { TableComponent } from './table/table.component';
     MatCardModule,
     MatMenuModule,
     MatRippleModule,
+    NzInputModule,
+    NzAutocompleteModule,
+    NzIconModule,
     RouterModule.forRoot([
       {
         path: '',
         component: HomeComponent
       },
+      {
+        path: 'upcoming',
+        component: UpcomingComponent
+      },      
       {
         path: 'lab',
         component: LabResultComponent        
@@ -76,9 +94,10 @@ import { TableComponent } from './table/table.component';
         path: 'user/:id',
         component: UserDetailsComponent        
       }                                                         
-    ])    
+    ]),
+    FormsModule    
   ],
-  providers: [UsersService],
+  providers: [UsersService, { provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

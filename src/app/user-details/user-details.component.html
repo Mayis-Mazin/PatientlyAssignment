@@ -1,6 +1,6 @@
 <div class="grid-container justfiy-content-center text-center">
-    <h1 class="mat-h1" class='t-color'>User Profile</h1>
-    <mat-grid-list cols="1" rowHeight="350px">
+    <h1 class="mat-h2" class='t-color'>User Profile</h1>
+    <mat-grid-list cols="1" rows='2' rowHeight="350px">
       <mat-grid-tile>
         <mat-card class="dashboard-card">
           <div class="content-container justfiy-content-center text-center">
@@ -12,9 +12,16 @@
               <img class="card-content card-img mx-auto mt-3"  mat-card-image src="https://image.flaticon.com/icons/png/512/149/149071.png" >
               <!-- {{user.imgUrl}} -->
             </mat-card-title>
-            <mat-card-subtitle class="dashboard-card-content">
-              <!-- {{card.name}} -->
-            </mat-card-subtitle>
+            <mat-card-subtitle *ngIf="isData" class="dashboard-card-content">
+                    {{userDetail.name}}
+                    <mat-card-content>
+                    email: {{userDetail.email}} 
+                    <br>
+                    phone number: {{userDetail.phone}} 
+                  
+                    </mat-card-content>
+                    </mat-card-subtitle>
+                    
            </mat-card-header>
            </div>
            </div>
@@ -40,7 +47,16 @@
             <div>
           </div>
             </mat-card-footer>
+         
         </mat-card>
       </mat-grid-tile>
     </mat-grid-list>
+    <div>
+        <mat-card-footer >
+            <a routerLink="/home">
+            <button  mat-raised-button>Home</button>
+            </a> 
+            </mat-card-footer>
+    </div>
   </div>
+  <!-- <app-table></app-table> -->

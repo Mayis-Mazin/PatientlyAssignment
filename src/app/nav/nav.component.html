@@ -4,18 +4,20 @@
 <mat-sidenav-container class="sidenav-container">
   <head>
   <title>Awesome Search Box</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">  
 </head>
 
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-      <button mat-raised-button class='brand-btn'> Patiently</button>
-      <mat-toolbar></mat-toolbar>
+      <button mat-raised-button class='brand-btn'>
+        <a routerLink="home" style="color: black;">
+          Patiently
+        </a>
+      </button>
        <mat-nav-list>
-      <a mat-list-item routerLink="/home">Upcoming Patients 
+      <a mat-list-item routerLink="/upcoming">Upcoming Patients 
         <h5><span class="badge badge-danger">+9</span></h5>
         </a>
       <a mat-list-item routerLink="/lab">Lab Result
@@ -61,8 +63,31 @@
      <div class="container h-100">
       <div class="d-flex justify-content-center h-100">
         <div class="searchbar">
-          <input class="search_input" type="text" name="" placeholder="Search...">
-          <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+          <input 
+            class="search_input" 
+            type="text" 
+            name="" 
+            placeholder="Search..."
+            [(ngModel)]="inputValue" 
+            (keyup)="onInput($event)"
+            (focus)="clear()" 
+            [nzAutocomplete]="auto">
+          <nz-autocomplete #auto>
+              <nz-auto-option *ngIf="isSearch" [nzValue]="0">
+                  <i nz-icon nzType="loading" class="loading-icon"></i>
+                  <span> Searching ... </span> 
+              </nz-auto-option>                                
+              <nz-auto-option 
+                  *ngFor="let result of results" 
+                  [nzValue]="result.name"  >
+                  <a routerLink="user/{{result.id}}">
+                      <span>{{ result.name }}</span>                                     
+                  </a>                                
+              </nz-auto-option>                                                           
+          </nz-autocomplete>             
+          <a href="#" class="search_icon">
+            <i class="fas fa-search"></i>
+          </a>
         </div>
       </div>
     </div>
